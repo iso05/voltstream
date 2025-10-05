@@ -205,12 +205,25 @@ ul li a.active {
       }
 
 }
-
-/* 🔹 Telefon (≤ 425px) */
 @media (max-width: 426px) {
   nav {
     padding: 1rem; 
   }
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;   
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #ff6600;
+  transition: width 0.3s ease; 
+}
+/* faqat active bo‘lganda chiziq chiqadi */
+nav ul li a.active::after {
+  width: 100%;  
+}
+
   .logo {
     font-size: 0.8rem; /* logo kichrayadi */
   }
@@ -237,7 +250,7 @@ ul li a.active {
     font-size: 0.9rem;
   }
   .home-img img {
-    width: 80%;   /* 🔹 Telefonlarda rasm kichrayadi */
+    width: 80%;   
     margin-top: 10px;
   }
 }
