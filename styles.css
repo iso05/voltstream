@@ -103,12 +103,35 @@ ul li a.active {
   flex: 1;
 }
 .home-text h1{
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   background: linear-gradient(90deg, #ff6600, #ff9a3c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
+}
+.home-text h2 {
+  font-size: 3rem;
+  cursor: default;
+  position: relative;
+  z-index: 2;
+  color: white; 
+  transition: color 0.3s ease;
+}
+.home-text h2:hover {
+  color: #000;
+}
+.light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0,0,0,0.95) 20%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 .home-text p{
   font-size: 1.2rem;
@@ -225,7 +248,7 @@ section {
     height: 90vh;
   }
   .home-text h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
   .home-text h2 {
     font-size: 1.5rem;
@@ -289,7 +312,7 @@ section {
 /*=== Mobile ====*/
 @media (max-width: 426px) {
   nav {
-    padding: 1rem; 
+    /* padding-top: 1rem;  */
   }
 nav ul li a::after {
   content: "";
@@ -317,7 +340,7 @@ nav ul li a.active::after {
   }
 
   .home-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .home-text h2 {
     font-size: 1.1rem;
@@ -336,7 +359,7 @@ nav ul li a.active::after {
   }
 
   .about {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .about-text .title {
